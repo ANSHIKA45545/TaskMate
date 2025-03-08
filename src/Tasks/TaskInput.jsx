@@ -12,7 +12,7 @@ export const TaskInput =({tasklist, setTasklist,task, setTask}) =>{
       setLoading(true);
       const apiKey="014ea21ffe58241638be80a224fd81bb";
 
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`)
       .then((response) => response.json())
       .then((data) => {
         if(data && data.main && data.weather){
